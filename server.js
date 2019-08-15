@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const URL = require('./models/urls');
 
-const port = process.env.PORT || 3001;
+const port = process.env.MONGODB_URI || 3001;
 
 const app = express();
 app.use(cors());
