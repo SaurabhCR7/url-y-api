@@ -1,5 +1,4 @@
 const express = require('express');
-const cors = require('cors');
 const router = express.Router();
 const uniqid = require('uniqid');
 
@@ -13,7 +12,6 @@ router.use((req, res, next) => {
 	);
 	next();
 });
-router.use(cors());
 router.get('/test', (req, res) => res.json({ msg: 'API is working fine!' }));
 
 router.post('/', (req, res) => {
