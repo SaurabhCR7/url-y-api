@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 
 const URL = require('./models/urls');
 
+const port = process.env.PORT || 3001;
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -37,6 +39,6 @@ app.get('/', (req, res) => {
 	res.send('Hello');
 });
 
-app.listen(3001, () => {
-	console.log('App is running on port 3000.');
+app.listen(port, () => {
+	console.log(`App is running on port ${port}!`);
 });
