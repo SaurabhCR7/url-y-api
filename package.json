@@ -1,13 +1,11 @@
 {
 	"name": "linkify",
 	"version": "1.0.0",
-	"description": "Link Shortener",
+	"description": "URL Shortener",
 	"main": "server.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"server": "nodemon server.js",
-		"client": "npm start --prefix client",
-		"dev": "concurrently \"npm run server\" \"npm run client\" "
+		"server": "nodemon server.js"
 	},
 	"author": "Saurabh Chauhan",
 	"license": "ISC",
