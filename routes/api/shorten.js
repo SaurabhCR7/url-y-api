@@ -4,14 +4,14 @@ const uniqid = require('uniqid');
 
 const URL = require('./../../models/urls');
 
-router.use((req, res, next) => {
-	res.header('Access-Control-Allow-Origin', '*');
-	res.header(
-		'Access-Control-Allow-Headers',
-		'Origin, X-Requested-With, Content-Type, Accept'
-	);
-	next();
-});
+// router.use((req, res, next) => {
+// 	res.header('Access-Control-Allow-Origin', '*');
+// 	res.header(
+// 		'Access-Control-Allow-Headers',
+// 		'Origin, X-Requested-With, Content-Type, Accept'
+// 	);
+// 	next();
+// });
 router.get('/test', (req, res) => res.json({ msg: 'API is working fine!' }));
 
 router.post('/', (req, res) => {

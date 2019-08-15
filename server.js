@@ -8,12 +8,7 @@ const URL = require('./models/urls');
 const port = process.env.PORT || 3001;
 
 const app = express();
-app.use(
-	cors({
-		origin: '*',
-		methods: ['POST', 'GET']
-	})
-);
+app.use(cors());
 app.use(bodyParser.json());
 
 const db = require('./config/keys').mongoURI;
