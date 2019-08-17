@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const uniqid = require('uniqid');
+const shortid = require('shortid');
+//const uniqid = require('uniqid');
 
 const URL = require('./../../models/urls');
 
@@ -23,7 +24,7 @@ router.post('/', (req, res) => {
 		} else {
 			console.log('This is a new link');
 			const webaddress = new URL({
-				_id: uniqid(),
+				_id: shortid.generate(),
 				url: urlData
 			});
 			webaddress.save(err => {
