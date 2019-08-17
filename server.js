@@ -38,7 +38,7 @@ app.get('/:hash', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-	res.send('Hello');
+	res.send('Welcome to Url-y.tk api');
 });
 
 app.listen(port, () => {
